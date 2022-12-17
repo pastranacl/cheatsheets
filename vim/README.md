@@ -1,4 +1,4 @@
-# VIM: Cheet sheet
+# VIM cheat sheet
 
 Cesar L. Pastrana, 2022
 
