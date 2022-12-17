@@ -5,8 +5,11 @@ Cesar L. Pastrana, 2022
 ## Text manipulation
 ### Copy, Cut and Paste
 First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select text. If we have the command `set mouse=a` we can use the text for it. Once the desired text has been selected,
+
 `Ctrl + y`: to copy (yank) the text
+
 `Ctrl + d`: to cut (delete) the text
+
 `Ctrl + p/P`: to paste the text after or before the cursor
 
 ### Intentation
