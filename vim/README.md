@@ -17,17 +17,22 @@ First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select t
 
 ## Undo/Redo
 `Esc + u` in normal mode to undo (alas Ctrl+Z)
+
 `Ctrl+R` to redo
 
 Since vim 7.3 there is persistent undo, such that changes are stored in a file. This permits to undo even after having closed the file.
 
 ### Indentation
 In Insert mode:
+
 `Ctrl + t` to indent the current line
+
 `Ctrl + d` to remove one indentation in the current line
 
 In Visual mode we can indent blocks of text. Go to visual mode `Ctrl + V`, select the text to indent and use
-`>` to add indent or `<` to remove indent.
+`>` to add indent
+
+`<` to remove indent.
 
 
 `gg=G` indents everything automatically following vim's wiseness 
