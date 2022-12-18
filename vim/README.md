@@ -15,7 +15,7 @@ First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select t
 
 `Ctrl + p/P` to paste the text after or before the cursor
 
-## Undo/Redo
+### Undo/Redo
 `Esc + u` in normal mode to undo (alas Ctrl+Z)
 
 `Ctrl+R` to redo
