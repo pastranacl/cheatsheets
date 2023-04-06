@@ -13,9 +13,11 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 
 `tmux ls` in command line list the session opened, including the number of windows.
 
+`tmux a -t session1` in command line opens tmux on the session named session1
+
 `Ctrl + b + $` (within tmux) can be used to rename the current session
 
-
+`Ctrl + b + D` (within tmux) detach the current session
 
 
 ## Windows
@@ -39,6 +41,7 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 
 `Ctrl + b + arrows` to navigate among pannels.
 
+`Ctrl + b + x` kill the pannel
 
 ## Other functionalities
 
@@ -95,3 +98,5 @@ set-option -g pane-border-style fg=colour233
 
 set-window-option -g window-status-bell-style bg=colour167,fg=colour235 # bg=red, fg=bg
 ```
+
+Note that the configuration is dependent on the tmux version (2.8 for the configuration file above).
