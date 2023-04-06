@@ -8,7 +8,8 @@ Tmux is a terminal multiplexer, similar to GNU Screen. It permits t create sessi
 The main key combination is `Ctrl + b`. This activates the mode where different functionalities are obtained by pressing an additional key.
 
 ## Sessions 
-We start a new nameless session by typing `tmux` in the command line. We can use specific names to identify the session
+We start a new nameless session by typing `tmux` in the command line. We can use specific names to identify the session.
+
 `tmux new -s tux` creates a new session with name tux.
 
 `tmux ls` in command line list the session opened, including the number of windows.
