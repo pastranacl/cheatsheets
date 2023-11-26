@@ -117,6 +117,6 @@ set-window-option -g window-status-bell-style bg=colour167,fg=colour235 # bg=red
 ```
 The result is:
 <p align="center">
-    <img src="tmux-screen.png" width="474">
+    <img src="tmux-screen.png" width="631">
 </p>
 Note that there are subtle variations in the configuration commands depending on the tmux version (3.3 for the configuration file above).
