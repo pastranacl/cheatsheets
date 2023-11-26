@@ -115,5 +115,7 @@ set-option -g pane-border-style fg=colour236
 set-window-option -g window-status-bell-style bg=colour167,fg=colour235 # bg=red, fg=bg
 
 ```
+The result is:
+<img src="https://github.com/pastranacl/cheatsheets/tree/main/tmux/tmux-screen.png" width="474">
 
-Note that there subtle configuration commands dependent on the tmux version (3.3 for the configuration file above).
+Note that there are subtle configuration commands dependent on the tmux version (3.3 for the configuration file above).
