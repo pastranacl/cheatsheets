@@ -18,7 +18,7 @@ First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select t
 ### Undo/Redo
 `Esc + u` in normal mode to undo (alas Ctrl+Z)
 
-`Ctrl+R` to redo
+`Ctrl + R` to redo
 
 Since vim 7.3 there is persistent undo, such that changes are stored in a file. This permits to undo even after having closed the file.
 
@@ -34,6 +34,7 @@ In Visual mode we can indent blocks of text. Go to visual mode `Ctrl + V`, selec
 
 `<` to remove indent.
 
+`=` In visual mode, it indents everything automatically following vim's wiseness 
 
 `gg=G` indents everything automatically following vim's wiseness 
 
@@ -43,8 +44,20 @@ In Visual mode we can indent blocks of text. Go to visual mode `Ctrl + V`, selec
 
 
 ## Tabs
-We can skip this process by using `tmux`. If we still want to use tabs:
+We can skip this process by using `tmux`. If we still want to use tab inside vim:
+`:tabnew` to create a tab
 
+`:tabnew file.py` to open `file.py` in a new tab
+
+`:tablose` closes the current tab
+
+`:tablose file.py` closes the tab corresponding to `file.py`
+
+`:tabn N` to move to tab number $N$
+
+`gt` to move to the next tab
+
+`gT` to move to the previou tab
 
 ## Combination with bash
 Using the exclamation mark `:! command` (as in Gnuplot) we can run commands without having to go out of vim. This is very practical to compile quickly or to do git commits.
@@ -53,32 +66,35 @@ Using the exclamation mark `:! command` (as in Gnuplot) we can run commands with
 ## Configuration
 
 ### Basic configuration
-My `~/.vimrc` file is simple:
-```
-" Fundamental configurations (self explanatory)
-syntax on
-filetype on 
-set mouse=a
-set number
-set nowrap
-set cursorline
-colorscheme jellybeans
-set background=dark
-
-
-" Use an undo file and set a directory to store the undo history
-set undofile
-set undodir=$HOME/.vim/vimundo/
-
-
-" Spell check, useful if used as LaTeX editor
-{% highlight vim %}
-set spelllang=en
-set spellfile=$HOME/vim/en.utf-8.add
-{% endhighlight %}
-```
+My `~/.vimrc` file is simple and can be downlaoded from this Repo.
 
 The jellybeans colorscheme is not installed by default and needs to be downloaded externally (monokai is other colorscheme among my favourites). Colorscheme files are placed on the folder `~/.vim/colors/`. We can see the installed colorscheme by `: colorscheme ` followed by `Ctrl+d`
 
 ### Useful plug-ins 
-There are some interesting functionalities that makes your life easier when VIM is used to write code. We need, however, to install external plug-ins.
+There are some interesting functionalities that makes your life easier when VIM is used to write code. We need, however, to install external plugins (more to be discussed on Neovim).
+
+
+## NEOVIM
+Neovim is Vim on steroids. By appropiately configurating it, we can have a customised IDE with plenty of functionalities.
+In particular, I started from the `init.lua` file that can be downloaded in the external [GitHub repo](https://github.com/nvim-lua/kickstart.nvim). The details of the plugins are described here: [https://www.youtube.com/watch?v=stqUbv-5u2s](https://www.youtube.com/watch?v=stqUbv-5u2s).
+This configuration file is very convenient: better highlighting of variables (nvim-treesitter), LSP text prediction (mason), and optimised search (Telescope). The managment of the plugins rely on  the lazy.vim manager.
+For the inclusion of LSP predictions, type `Mason`, search for the language of interest and type `i`,
+
+I modified the Lua file and included personal plugins and configurations:
+- Modified colours theme to `midnight` and lua-line to 'cattppuci'.
+- Exploration pannel toggled with `Ctrl+N` with nicely looking icons using nerd-icons (need to download the [Nerd fonts](https://www.nerdfonts.com/), otherwise the icons look odd).
+- Shortcut to create new tabs with `Ctrl+t`.
+- Spell checker, allowing to use nvim for LaTeX documents. It is by default not enabled but it can be enabled via `:set invspell`.
+
+This is how it looks:
+
+<p align="center">
+    <img src="nvim_screen.png" width="631">
+</p>
+
+This personal `init.lua` file is located in this repository. To make it work simply paste it in the folder `~/.config/nvim/`.
+
+
+
+
+
