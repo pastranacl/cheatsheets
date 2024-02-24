@@ -68,7 +68,7 @@ Using the exclamation mark `:! command` (as in Gnuplot) we can run commands with
 ### Basic configuration
 My `~/.vimrc` file is simple and can be downlaoded from this Repo.
 
-The jellybeans colorscheme is not installed by default and needs to be downloaded externally (monokai is other colorscheme among my favourites). For my own convenience, those colorschemes are included in this repository. Colorscheme files are placed on the folder `~/.vim/colors/` and we can confirm the installed colorschemes by typing `: colorscheme ` followed by `Ctrl+d`
+The jellybeans colorscheme is not installed by default and needs to be downloaded externally (molokai is other colorscheme among my favourites). For my own convenience, those colorschemes are included in this repository. Colorscheme files are placed on the folder `~/.vim/colors/` and we can confirm the installed colorschemes by typing `: colorscheme ` followed by `Ctrl+d`
 
 ### Useful plug-ins 
 There are some interesting functionalities that makes your life easier when VIM is used to write code. We need, however, to install external plugins (more to be discussed on Neovim).
