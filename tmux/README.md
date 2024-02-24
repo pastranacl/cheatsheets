@@ -49,73 +49,9 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 
 
 ## Configurations
-Here is an example of my `tmux.conf`file:
+Here is an example of my `.tmux.conf`file with appropiate comments can be found in this repository.
+It should be included in the home directory. The result is:
 
-```
-set-option -g default-shell "/bin/bash"
-set -g default-terminal "screen-256color"
-
-
-
-
-## STATUS BAR PROPERTIES +++++++++++++++++++++++++++++++++++++++
-set-option -g default-shell "/bin/bash"
-set -g default-terminal "screen-256color"
-
-
-## STATUS BAR PROPERTIES +++++++++++++++++++++++++++++++++++++++
-set-option -g default-shell "/bin/bash"
-set -g default-terminal "screen-256color"
-
-
-## STATUS BAR PROPERTIES +++++++++++++++++++++++++++++++++++++++
-# Statusbar
-set -g status-fg white
-set -g status-bg colour236
-
-# Session name on the left side
-set -g status-left "  #[fg=colour27]#S#[fg=white]  |  "
-set -g status-style "bright"
-
-## PANELS COLOURS
-# Default window title colors
-# (#F is the active symbol, #W in the window name; #I is the window index)
-setw -g window-status-style fg=white # grey
-setw -g window-status-style bg=color236
-setw -g window-status-style "none"
-setw -g window-status-format "[#[fg=colour1]#I: #[fg=white]#W]"
-
-# Active window
-setw -g window-status-current-style fg=white
-#setw -g window-status-current-style bg=colour240
-setw -g window-status-current-style  "bright"
-#In Tmux3.3 you need to set the colour of the background here (the setw... bg=xxx  above is ignored)
-setw -g window-status-current-format "#[bg=colour240][#[fg=colour196]#I: #[fg=white]#W]"
-
-# Window activity
-setw -g window-status-activity-style fg=colour246 # grey
-setw -g window-status-activity-style bg=black
-
-#set-window-option -g window-status-style bg=colour124,fg=colour0 # bg=yellow, fg=bg1
-
-#-----------------------------------------------------------------
-
-
-
-# PANES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-# Active pane border color
-set-option -g pane-active-border-style fg=colour1
-
-# Inactive pane border color
-set-option -g pane-border-style fg=colour236
-
-#-----------------------------------------------------------------
-
-set-window-option -g window-status-bell-style bg=colour167,fg=colour235 # bg=red, fg=bg
-
-```
-The result is:
 <p align="center">
     <img src="tmux-screen.png" width="631">
 </p>
