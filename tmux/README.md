@@ -55,4 +55,7 @@ It should be included in the home directory. The result is:
 <p align="center">
     <img src="tmux-screen.png" width="631">
 </p>
+
+I also include the following line `LS_COLORS="$LS_COLORS:ow=102;31;01"` to make the files with 777 permissions show more clear colours.
+
 Note that there are subtle variations in the configuration commands depending on the tmux version (3.3 for the configuration file above).
