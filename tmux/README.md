@@ -32,6 +32,8 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 
 `Ctrl + b + ,` renames the current window.
 
+`Ctrl + b + <` Opens a menu thtat allows you to swap the ordering of the windows
+
 
 ## Pannels
 `Ctrl + b + "` splits the window creating a pannel horizontally.
@@ -42,11 +44,19 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 
 `Ctrl + b + arrows` to navigate among pannels.
 
+`Ctrl + b` + release `b` + arrows to resize the pannels
+
 `Ctrl + b + x` kill the pannel
 
+
+
 ## Other functionalities
+`Ctrl + b + [` to move across the pannel text
 
+It is convenient to copy-pase commands, folders, etc. For it, include in the `.tmux.conf` the command `setw -g mode-keys vi`
 
+Then, we go to the line of interest with `Ctrl + b + [`, press `space` to start the selecion of text. Once select, press `Enter` to copy.
+Finally, move the destination and press `Ctrl + b + ]` to pase it.
 
 ## Configurations
 Here is an example of my `.tmux.conf`file with appropiate comments can be found in this repository.
