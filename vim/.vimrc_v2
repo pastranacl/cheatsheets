@@ -1,0 +1,68 @@
+" Fundamental configurations (self explanatory)
+syntax on
+filetype on
+set mouse=a
+set number
+set nowrap
+set cursorline
+colorscheme wildcharm
+:set background=dark
+
+
+" Use an undo file and set a directory to store the undo history
+set undofile
+set undodir=$HOME/.vim/vimundo/
+
+
+" Leader key
+let mapleader=" "
+
+
+
+
+" To add self in Python highlighting
+augroup PythonCustomization
+  " highlight python self, when followed by a comma, a period or a parenth
+   :autocmd FileType python syn match pythonStatement "\(\W\|^\)\@<=self\([\.,)]\)\@="
+augroup END
+
+" =====================
+" Plugins
+" =====================
+
+call plug#begin('~/.vim/plugged')
+
+" Vertical indentation guides
+Plug 'Yggdroot/indentLine'
+
+" Predictive completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" File search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Git integration
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+
+" =====================
+" Plugin settings
+" =====================
+
+" IndentLine settings
+let g:indentLine_char = '│'
+
+" FZF keybindings
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>g :GFiles<CR>
+
+" COC completion
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" : "\<TAB>"
+
+inoremap <silent><expr> <S-TAB>
+      \ pumvisible() ? "\<C-p>" : "\<C-h>"
+

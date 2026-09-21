@@ -53,10 +53,12 @@ We start a new nameless session by typing `tmux` in the command line. We can use
 ## Other functionalities
 `Ctrl + b + [` to move across the pannel text
 
-It is convenient to copy-pase commands, folders, etc. For it, include in the `.tmux.conf` the command `setw -g mode-keys vi`
-
-Then, we go to the line of interest with `Ctrl + b + [`, press `space` to start the selecion of text. Once select, press `Enter` to copy.
+### Copy-Paste
+It is convenient to copy-pase commands, folders, etc. For it, include in the `.tmux.conf` the command `setw -g mode-keys vi` Then, we go to the line of interest with `Ctrl + b + [`, press `space` to start the selecion of text. Once select, press `Enter` to copy.
 Finally, move the destination and press `Ctrl + b + ]` to pase it.
+
+In a GUI konsole, we can press `Shift` to use the mouse and copy/past as usual
+
 
 ## Configurations
 Here is an example of my `.tmux.conf`file with appropiate comments can be found in this repository.

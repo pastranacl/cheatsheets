@@ -6,6 +6,7 @@ Cesar L. Pastrana, 2022
 This is a cheat sheet of commands to be used with VIM, focused on its configuration and usage as a ligthweigth IDE.
 
 ## Text manipulation
+
 ### Copy, Cut and Paste
 First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select text. If we have the command `set mouse=a` we can use the text for it. Once the desired text has been selected,
 
@@ -18,7 +19,7 @@ First, we need to go to Visual mode `Ctrl + V`. Then, we are allowed to select t
 ### Undo/Redo
 `Esc + u` in normal mode to undo (alas Ctrl+Z)
 
-`Ctrl + R` to redo
+`Ctrl + R` to repear the undo
 
 Since vim 7.3 there is persistent undo, such that changes are stored in a file. This permits to undo even after having closed the file.
 
@@ -38,11 +39,29 @@ In Visual mode we can indent blocks of text. Go to visual mode `Ctrl + V`, selec
 
 `gg=G` indents everything automatically following vim's wiseness 
 
+### Search and Replace
+
+`/\<word\>` To find the word `word`. \< means beginning of a word, and \> means the end of the word.
+
+`:%s/foo/bar/g` Replaces foo to bar. The `s` stands for *substitute*. The percentage symbol is to indicate full file, and in its absence the substitution would be only on the current line. The g is to make it global, that is not only the very first entry.
+
+`:%s/foo/bar/gi` Same as before but case insensitive.
+
 
 ### Text autocompletion 
 `Ctrl + p` or `Ctrl + n` autompletes considering previous and next the position of the cursor.
 
 
+## Navigation 
+
+`:127` goes to line 127
+`H` moves cursor to the top of the screen
+`M` moves cursor to the middle of the screen
+`L` moves cursor to the bottom of the screen
+`gg` goes to the first line
+`G` goes to the last line
+
+    
 ## Tabs
 We can skip this process by using `tmux`. If we still want to use tab inside vim:
 `:tabnew` to create a tab
@@ -68,7 +87,7 @@ Using the exclamation mark `:! command` (as in Gnuplot) we can run commands with
 ### Basic configuration
 My `~/.vimrc` file is simple and can be downlaoded from this Repo.
 
-The jellybeans colorscheme is not installed by default and needs to be downloaded externally (molokai is other colorscheme among my favourites). For my own convenience, those colorschemes are included in this repository. Colorscheme files are placed on the folder `~/.vim/colors/` and we can confirm the installed colorschemes by typing `: colorscheme ` followed by `Ctrl+d`
+The jellybeans colorscheme is not installed by default and needs to be downloaded externally, molokai is other colorscheme among my favourites, both included in this repository. Colorscheme files are placed on the folder `~/.vim/colors/` and we can confirm the installed colorschemes by typing `: colorscheme ` followed by `Ctrl+d`. Or simply press `Tab` to move one by one. For instance, wildcharm is a good by default scheme.
 
 ### Useful plug-ins 
 There are some interesting functionalities that makes your life easier when VIM is used to write code. We need, however, to install external plugins (more to be discussed on Neovim).
